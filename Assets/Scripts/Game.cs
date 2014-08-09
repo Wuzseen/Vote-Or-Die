@@ -23,4 +23,8 @@ public class Game : MonoBehaviour {
 		numOfPlayers++;
 		print (numOfPlayers);
 	}
+
+	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
+
+	}
 }
