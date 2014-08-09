@@ -11,10 +11,12 @@ public class PhotonSetup : MonoBehaviour {
 	}
 
 	void OnCreatedRoom() {
+		print ("Creating Room");
 		PhotonNetwork.InstantiateSceneObject("Game",Vector3.zero,Quaternion.identity,0,null);
 	}
 
 	void OnJoinedRoom() {
+		print ("Joined Room");
 		PhotonNetwork.Instantiate("Voter",Vector3.zero,Quaternion.identity,0);
 	}
 }
