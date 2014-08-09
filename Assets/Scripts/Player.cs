@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		Game.OnRoundEnd += GoalCompleted;
+		Game.Instance.NewGame();
 		print ("Hello");
 	}
 

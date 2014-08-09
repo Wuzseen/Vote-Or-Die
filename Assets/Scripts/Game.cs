@@ -2,21 +2,18 @@
 using System.Collections;
 
 public class Game : MonoBehaviour {
+	public static Game Instance;
 	public delegate void GameProcess();
 	public static event GameProcess OnRoundEnd;
 	public int numOfPlayers;
+	private PhotonView photonView;
 
-
-	// Use this for initialization
-	void Start () {
-		PhotonNetwork.ConnectUsingSettings("1.0");
+	void Awake() {
+		Instance = this;
+		photonView = this.GetComponent<PhotonView>();
 	}
 
-	void OnReceivedRoomListUpdate() {
-		PhotonNetwork.JoinOrCreateRoom("TestRoom",new RoomOptions(),null);
-	}
-
-	void OnJoinedRoom() {
-		PhotonNetwork.Instantiate("Player",Vector3.zero,Quaternion.identity,0);
+	public void NewGame() {
+		print ("wuthup");
 	}
 }

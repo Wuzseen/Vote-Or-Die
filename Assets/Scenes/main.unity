@@ -77,14 +77,14 @@ NavMeshSettings:
 --- !u!1 &175142091
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+  m_PrefabInternal: {fileID: 1059093755}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 175142093}
   - 114: {fileID: 175142092}
   m_Layer: 0
-  m_Name: Game
+  m_Name: PhotonHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,15 +98,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 175142091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2a2a1fe37524bf8b9f7f6a215835ac, type: 3}
+  m_Script: {fileID: 11500000, guid: a15c9734b28724b4eb57ae29bb1dc692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfPlayers: 0
 --- !u!4 &175142093
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+  m_PrefabInternal: {fileID: 1059093755}
   m_GameObject: {fileID: 175142091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -114,6 +113,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1001 &1059093755
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_RootMapOrder
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: subId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+      propertyPath: m_Name
+      value: PhotonHandler
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+    - {fileID: 11400002, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 233a8648df8684f94a83cdd771acbe95, type: 2}
+  m_RootGameObject: {fileID: 175142091}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1156206051
 GameObject:
   m_ObjectHideFlags: 0
