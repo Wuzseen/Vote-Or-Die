@@ -13,8 +13,7 @@ public class Player : MonoBehaviour {
 		photonView = this.GetComponent<PhotonView>();
 		if(PhotonNetwork.player == photonView.owner) {
 			localPlayer = this;
-			Game game = (Game)GameObject.FindObjectOfType(typeof(Game));
-			game.photonView.RPC("NewPlayer",PhotonTargets.All,null);
+			Game.Instance.photonView.RPC("NewPlayer",PhotonTargets.All,null);
 		}
 	}
 
