@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class PhotonSetup : MonoBehaviour {
+	public static PhotonSetup Instance;
 	void Start () {
 		PhotonNetwork.ConnectUsingSettings("1.0");
 	}

@@ -11,9 +11,9 @@ public class Player : MonoBehaviour {
 	void Awake () {
 		Game.OnRoundEnd += GoalCompleted;
 		photonView = this.GetComponent<PhotonView>();
-		if(PhotonNetwork.player == photonView.owner) {
+		if(photonView.isMine) {
 			localPlayer = this;
-			Game.Instance.photonView.RPC("NewPlayer",PhotonTargets.All,null);
+			Game.Instance.NewPlayer();
 		}
 	}
 
