@@ -25,4 +25,5 @@ MonoBehaviour:
   - InstantiateRpc
   - OnAwakeRPC
   - DestroyRpc
+  - NewPlayer
   DisableAutoOpenWizard: 0
