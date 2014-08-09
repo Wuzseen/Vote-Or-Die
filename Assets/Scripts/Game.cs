@@ -6,7 +6,7 @@ public class Game : MonoBehaviour {
 	public delegate void GameProcess();
 	public static event GameProcess OnRoundEnd;
 	public int numOfPlayers;
-	private PhotonView photonView;
+	public PhotonView photonView;
 
 	void Awake() {
 		Instance = this;
@@ -14,6 +14,11 @@ public class Game : MonoBehaviour {
 	}
 
 	public void NewGame() {
-		print ("wuthup");
+	}
+
+	[RPC]
+	public void NewPlayer() {
+		numOfPlayers++;
+		print (numOfPlayers);
 	}
 }
