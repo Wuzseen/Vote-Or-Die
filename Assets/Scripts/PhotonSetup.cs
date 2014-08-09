@@ -18,6 +18,5 @@ public class PhotonSetup : MonoBehaviour {
 
 	void OnJoinedRoom() {
 		print ("Joined Room");
-		PhotonNetwork.Instantiate("Voter",Vector3.zero,Quaternion.identity,0);
 	}
 }

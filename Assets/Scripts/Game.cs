@@ -9,6 +9,7 @@ public class Game : MonoBehaviour {
 	public PhotonView photonView;
 
 	void Awake() {
+		print ("Game created");
 		Instance = this;
 		photonView = this.GetComponent<PhotonView>();
 		PhotonNetwork.Instantiate("Voter",Vector3.zero,Quaternion.identity,0);
