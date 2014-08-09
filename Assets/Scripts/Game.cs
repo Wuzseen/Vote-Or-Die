@@ -21,10 +21,13 @@ public class Game : MonoBehaviour {
 	[RPC]
 	public void NewPlayer() {
 		numOfPlayers++;
-		print (numOfPlayers);
 	}
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
-
+		if(stream.isWriting) {
+			stream.SendNext(numOfPlayers);
+		} else {
+			numOfPlayers = (int)stream.ReceiveNext();
+		}
 	}
 }
