@@ -11,6 +11,7 @@ public class Game : MonoBehaviour {
 	void Awake() {
 		Instance = this;
 		photonView = this.GetComponent<PhotonView>();
+		PhotonNetwork.Instantiate("Voter",Vector3.zero,Quaternion.identity,0);
 	}
 
 	public void NewGame() {
