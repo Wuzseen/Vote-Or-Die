@@ -24,10 +24,10 @@ public class Game : MonoBehaviour {
 	}
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
-		if(stream.isWriting) {
-			stream.SendNext(numOfPlayers);
-		} else {
-			numOfPlayers = (int)stream.ReceiveNext();
-		}
+//		if(stream.isWriting) {
+//			stream.SendNext(numOfPlayers);
+//		} else {
+//			numOfPlayers = (int)stream.ReceiveNext();
+//		}
 	}
 }
