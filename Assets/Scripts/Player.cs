@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
 		photonView = this.GetComponent<PhotonView>();
 		if(photonView.isMine) {
 			localPlayer = this;
-			Game.Instance.NewPlayer();
+			Game.Instance.photonView.RPC("NewPlayer",PhotonTargets.All,null);
 		}
 	}
 
