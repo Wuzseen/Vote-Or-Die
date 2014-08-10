@@ -1,0 +1,1 @@
+﻿using UnityEngine;using System.Collections;public class ItemHoarder : PlayerDecorator {    public override bool GoalCompleted() {        return decorated.GoalCompleted() || this.inventory.Count >= 3;    }    public override void GainMoney(int amount) {        decorated.GainMoney(amount);    }}

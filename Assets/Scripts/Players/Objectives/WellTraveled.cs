@@ -1,0 +1,1 @@
+﻿using UnityEngine;using System.Collections;public class WellTraveled : PlayerDecorator {    public override bool GoalCompleted() {        return this.LocationsVisited >= 15 || decorated.GoalCompleted();    }    public override void GainMoney(int amount) {        decorated.GainMoney(amount);    }}
