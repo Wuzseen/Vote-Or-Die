@@ -2,11 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public struct GridLocation {
-    public int x;
-    public int y;
-}
-
 // Decorator pattern base class
 public abstract class Player : MonoBehaviour {
 	public static Player localPlayer;
