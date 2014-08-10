@@ -20,7 +20,14 @@ public class Game : MonoBehaviour {
 	}
 
 	[RPC]
-	public void CallVote() {
+	public void BuildMap() {
+		if(!photonView.isMine) {
+			return;
+		}
+	}
+
+	[RPC]
+	public void AddRoom() {
 
 	}
 
