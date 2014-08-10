@@ -7,6 +7,7 @@ public class Game : MonoBehaviour {
 	public static event GameProcess OnRoundEnd;
 	public int numOfPlayers;
 	public PhotonView photonView;
+	private VoteHandler voteHandler;
 
 	void Awake() {
 		print ("Game created");
@@ -19,15 +20,15 @@ public class Game : MonoBehaviour {
 	}
 
 	[RPC]
+	public void CallVote() {
+
+	}
+
+	[RPC]
 	public void NewPlayer() {
 		numOfPlayers++;
 	}
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
-//		if(stream.isWriting) {
-//			stream.SendNext(numOfPlayers);
-//		} else {
-//			numOfPlayers = (int)stream.ReceiveNext();
-//		}
 	}
 }

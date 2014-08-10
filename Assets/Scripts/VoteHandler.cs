@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VoteHandler : MonoBehaviour {
+public class VoteHandler {
 
 	// Use this for initialization
 	void Start () {
